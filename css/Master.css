@@ -1,9 +1,10 @@
-h1 {
-  font-style: ;
+:root {
+  --default-font-size: 25px;
 }
-div nav.header {
-  margin: 10px;
-  border: solid black;
-  padding: 2px;
-  background-color: yellow;
+#topBanner {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+#sideBanner {
+  background-color: blue;
 }
