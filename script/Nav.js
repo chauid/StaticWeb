@@ -1,1 +1,4 @@
-const canvas = document.getElementById('sidebar')
+function buttonhover() {
+    var buttonline = document.getElementById("Menu");
+    buttonline.classList.toggle('-active');
+}

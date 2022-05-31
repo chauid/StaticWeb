@@ -1,5 +1,5 @@
 :root {
-  --default-font-size: 100%;
+  --default-font-size: 125%;
 }
 html, body {
   margin: 0;
@@ -48,6 +48,7 @@ a.menu {
   animation-name: appearMenu;
   animation-iteration-count: 1;
   animation-duration: 1s;
+  animation-timing-function: ease-in-out;
   transition-duration: 0.25s;
 }
 a.menu:hover {
