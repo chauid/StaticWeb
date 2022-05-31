@@ -1,5 +1,5 @@
 :root {
-  --default-font-size: 25px;
+  --default-font-size: 100%;
 }
 html, body {
   height: 100%;
@@ -7,7 +7,8 @@ html, body {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 div h1 {
-  font-size: calc(var(--default-font-size) + 25px);
+  margin-bottom: 10%;
+  font-size: calc(var(--default-font-size) + 200%);
   text-align: center;
   color: rgba(0, 0, 0, 0);
   animation-name: appearHead;
@@ -41,22 +42,22 @@ a.menu {
   padding: 30px;
   width:fit-content;
   text-decoration: none;
-  font-size: var(--default-font-size);
+  font-size: calc(var(--default-font-size) + 50%);
   color: #4874B7;
   animation-name: appearMenu;
   animation-iteration-count: 1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   transition-duration: 0.25s;
 }
 a.menu:hover {
   padding: 50px;
   border: solid 3px #72624B;
-  background-color: #E8E8E8;
-  color: #B3A161;
+  background-color: rgba(232,232,232,0.5);
+  color: #E5C557;
 }
 a.menu:active {
-  color: #FFDB61;
-  background-color: #C6C6C6;
+  color: #B3A161;
+  background-color: rgba(198,198,198,0.5);
 }
 
 
