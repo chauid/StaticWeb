@@ -2,6 +2,7 @@
   --default-font-size: 100%;
 }
 html, body {
+  margin: 0;
   height: 100%;
   text-align: center;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -26,20 +27,20 @@ div.cwn {
   background-size: 1000px 1000px;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: -1;
 }
 div.header {
-  top: 300px;
+  top: 30%;
   left: 50%;
   width:fit-content;
   position: absolute;
   transform: translateX(-50%);
 }
 a.menu {
-  margin: 20px;
+  margin: 2%;
   border: solid 3px #1F334F;
-  padding: 30px;
+  padding: 3%;
   width:fit-content;
   text-decoration: none;
   font-size: calc(var(--default-font-size) + 50%);
@@ -50,17 +51,16 @@ a.menu {
   transition-duration: 0.25s;
 }
 a.menu:hover {
-  padding: 50px;
+  padding: 5%;
   border: solid 3px #72624B;
   background-color: rgba(232,232,232,0.5);
-  color: #E5C557;
+  font-weight: bold;
+  color: #B3A161;
 }
 a.menu:active {
-  color: #B3A161;
+  color: #5B4E22;
   background-color: rgba(198,198,198,0.5);
 }
-
-
 @keyframes appearHead {
   0% {
     color:rgba(45, 73, 114, 0);
@@ -71,13 +71,13 @@ a.menu:active {
 }
 @keyframes appearMenu {
   0% {
-    margin: 0px;
-    padding: 0px;
-    font-size: 0px;
+    margin: 0%;
+    padding: 0%;
+    font-size: 0%;
   }
   to {
-    margin: 20px;
-    padding: 30px;
-    font-size: var(--default-font-size);
+    margin: 2%;
+    padding: 3%;
+    font-size: calc(var(--default-font-size) + 50%);
   }
 }

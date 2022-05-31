@@ -1,10 +1,46 @@
 :root {
-  --default-font-size: 25px;
+  --default-font-size: 100%;
 }
-#topBanner {
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+canvas {
+  position: absolute;
+}
+#Header{
+  position: relative;
+  padding: 1%;
+  width: 100%;
+  height: 2%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  background-color: beige;
+  z-index: 9;
+  float: left;
 }
-#sideBanner {
-  background-color: blue;
+#Nav {
+  position: absolute;
+  width: 15%;
+  height: 95%;
+  background-color: rgba(255, 0, 0, 0.5);
+  z-index: 10;
+  float: left;
+  display:none;
+}
+#Contents {
+  margin: auto;
+  position: relative;
+  width: 80%;
+  height: 90%;
+  background-color: aliceblue;
+  float: right - 10%;
+}
+#Footer {
+  position: relative;
+  width: 100%;
+  height: 5%;
+  background-color: aquamarine;
+  clear: both;
+  text-align: center;
 }
