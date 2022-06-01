@@ -1,3 +1,4 @@
-h5 {
-  margin: 0.5%;
+.header_name {
+  width: 10%;
+  font-size: calc(var(--default-font-size) - 75%);
 }

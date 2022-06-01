@@ -1,46 +1,95 @@
 :root {
   --default-font-size: 125%;
+  --default-transduration: 0.5s;
+  --Header-color: #613EA0;
+  --Header-background: rgba(144,119,188,0.3);
+  --Nav-color: #3A2560;
+  --Nav-background: #FFFFFF;
+  --Contents-color: #000000;
+  --Contents-backgroung: #FFFFFF;
+  --Footer-color: #636363;
+  --Footer-background: #F2F2FC;
 }
 html, body {
-  margin: 0;
+  width: 100%;
   height: 100%;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family:'Noto Sans KR', sans-serif;
 }
-#Header {
-  position: relative;
+.Header {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  position: fixed;
   width: 100%;
   height: 5%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: beige;
   z-index: 9;
   float: left;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: calc(var(--default-font-size) + 50%);
+  color: var(--Header-color);
+  background-color: var(--Header-background);
+  transition: all calc(var(--default-transduration) + 0.25s);
 }
-#Nav {
-  position: absolute;
-  width: 15%;
-  height: 95%;
-  background-color: rgba(255, 0, 0, 0.5);
+.Header_container {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  transition: all calc(var(--default-transduration) + 0.25s);
+}
+#Header.-active {
+  padding-left: 15%;
+  width: 85%;
+}
+.header_name {
+  width: 10%;
+  font-size: calc(var(--default-font-size) - 75%);
+}
+.Nav {
+  margin-top: 0.5%;
+  margin-left: -1%;
+  border: solid 3px #000000;
+  border-radius: 15% 15% 15% 15% / 5% 5% 5% 5%;
+  overflow: hidden;
+  position:fixed;
+  width: 0;
+  height: 98%;
   z-index: 10;
-  float: left;
-  display:none;
+  color: var(--Nav-color);
+  background-color: var(--Nav-background);
+  transition: all calc(var(--default-transduration) + 0.25s);
 }
-#Contents {
+#Nav.-active {
+  margin: 0.5%;
+  width: 15%;
+}
+.MainWrap {
+  padding-top: 5%;
+}
+.Contents {
   margin: auto;
   position: relative;
   width: 80%;
-  height: 90%;
-  background-color: aliceblue;
+  height: auto;
+  color: var(--Contents-color);
+  background-color: var(--Contents-background);
 }
-#Footer {
+.Footer {
+  margin: auto;
   position: relative;
   width: 100%;
   height: 5%;
-  background-color: aquamarine;
   clear: both;
   text-align: center;
+  color: var(--Footer-color);
+  background-color: var(--Footer-background);
+  vertical-align: middle;
 }
 .menubutton {
   margin: 0.1%;
@@ -52,25 +101,33 @@ html, body {
   cursor: pointer;
   text-align: center;
   align-items: center;
-  transition: all 0.5s ease-in-out;
+  transition: all var(--default-transduration) ease-in-out;
 }
 .line {
-  margin: 10% auto;
-  width: 50%;
-  height: 10%;
+  margin: 15% auto;
+  width: 60%;
+  height: 8%;
   box-sizing: border-box;
   display: block;
   background-color: #1E1E1E;
   transition: all 0.5s ease-in-out;
 }
 #Menu.-active .line:nth-child(1){
-  transform: translateX(-40%) translateY(50%) rotate(-45deg);
+  transform: translateX(-40%) translateY(140%) rotate(-45deg);
   width: 40%;
 }
 #Menu.-active .line:nth-child(3){
-  transform: translateX(-40%) translateY(-50%) rotate(45deg);
+  transform: translateX(-40%) translateY(-140%) rotate(45deg);
   width: 40%;
 }
-.menubutton:active {
-  dis
+div.menu {
+  width: 50%;
+  align-items: center;
+}
+a.menu {
+  margin: 3%;
+  width: 10%;
+}
+p.designed {
+  vertical-align: middle;
 }
