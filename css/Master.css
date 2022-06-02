@@ -2,13 +2,14 @@
   --default-font-size: 125%;
   --default-transduration: 0.5s;
   --Header-color: #613EA0;
-  --Header-background: rgba(144,119,188,0.3);
+  --Header-background: rgba(200,187,222,0.7);
   --Nav-color: #3A2560;
   --Nav-background: #FFFFFF;
+  --Wrap-background: #FFFFFF;
   --Contents-color: #000000;
-  --Contents-backgroung: #FFFFFF;
+  --Contents-background: #F7F7FD;
   --Footer-color: #636363;
-  --Footer-background: #F8F8FD;
+  --Footer-background: #FFFFFF;
 }
 html, body {
   width: 100%;
@@ -17,6 +18,7 @@ html, body {
   padding: 0;
   font-family:'Noto Sans KR', sans-serif;
 }
+/* Header 관련 스타일 적용 */
 .Header {
   margin: 0;
   padding: 0;
@@ -28,7 +30,7 @@ html, body {
   float: left;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: calc(var(--default-font-size) + 50%);
   color: var(--Header-color);
@@ -44,54 +46,12 @@ html, body {
   transition: all calc(var(--default-transduration) + 0.25s);
 }
 #Header.-active {
-  padding-left: 15%;
-  width: 85%;
+  padding-left: 14%;
+  width: 86%;
 }
 .header_name {
-  width: 10%;
-  font-size: calc(var(--default-font-size) - 75%);
-}
-.Nav {
-  margin-top: 0.5%;
-  margin-left: -1%;
-  border: solid 3px #000000;
-  border-radius: 15% 15% 15% 15% / 5% 5% 5% 5%;
-  overflow: hidden;
-  position:fixed;
-  width: 0;
-  height: 98%;
-  z-index: 10;
-  color: var(--Nav-color);
-  background-color: var(--Nav-background);
-  transition: all calc(var(--default-transduration) + 0.25s);
-}
-#Nav.-active {
-  margin: 0.5%;
   width: 15%;
-}
-.MainWrap {
-  padding-top: 5%;
-}
-.Contents {
-  margin: auto;
-  position: relative;
-  width: 80%;
-  height: auto;
-  color: var(--Contents-color);
-  background-color: var(--Contents-background);
-}
-.Footer {
-  margin: auto;
-  position: relative;
-  width: 100%;
-  height: 5%;
-  clear: both;
-  color: var(--Footer-color);
-  background-color: var(--Footer-background);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: calc(var(--default-font-size) - 75%);
 }
 .menubutton {
   margin: 0.1%;
@@ -124,9 +84,115 @@ html, body {
 }
 div.menu {
   width: 50%;
-  align-items: center;
 }
 a.menu {
-  margin: 3%;
+  margin-left: 3%;
   width: 10%;
+  height: 100%;
+  text-decoration: none;
+  font-weight: 600;
+}
+a.menu:hover {
+  color: #3EA061;
+}
+a.menu:active {
+  color: #1F5030;
+}
+/* Navigation 관련 스타일 적용 */
+.Nav {
+  margin-left: -1%;
+  border-right: solid 3px #000000;
+  overflow: hidden;
+  position:fixed;
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  color: var(--Nav-color);
+  background-color: var(--Nav-background);
+  font-size: var(--default-font-size);
+  transition: all calc(var(--default-transduration) + 0.25s);
+}
+#Nav.-active {
+  width: 15%;
+}
+.Nav_inner {
+  margin: 10%;
+  margin-left: 12%;
+  width: 80%;
+  height: 80%;
+  display: none;
+}
+#Nav_inner.-active {
+  display: block;
+}
+div.Nav_header {
+  margin: 10% auto;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  font-size: calc(var(--default-font-size) + 15%);
+}
+a.Nav_header {
+  text-decoration: none;
+  color: var(--Nav-color);
+}
+span.Nav_header_name {
+  font-size: calc(var(--default-font-size) - 80%);
+}
+div.Nav_home {
+  margin: 10% auto;
+  font-size: calc(var(--default-font-size) - 15%);
+}
+a.Nav_home {
+  text-decoration: none;
+}
+a.Nav_home:hover {
+  text-decoration: underline;
+}
+ul.Nav_list {
+  padding: 0;
+  list-style: none;
+}
+/* Contents 관련 스타일 적용 */
+.MainWrap {
+  margin: 0;
+  padding-top: 0.1%;
+  border-bottom: solid 0.5px #DADADA;
+  background-color: var(--Wrap-background);
+}
+.Contents {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 4%;
+  position: relative;
+  width: 80%;
+  height: auto;
+  color: var(--Contents-color);
+  background-color: var(--Contents-background);
+}
+/* Footer 관련 스타일 적용 */
+.Footer {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 5%;
+  color: var(--Footer-color);
+  background-color: var(--Footer-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.github {
+  margin-left: 10%;
+}
+a.github {
+  font-size: var(--default-font-size);
+  color: inherit;
+  text-decoration: none;
+}
+a.github:hover {
+  color: #000000;
+}
+div.designed {
+  margin-right: 10%;
+  font-size: calc(var(--default-font-size) - 50%);
 }

@@ -56,7 +56,7 @@ a.menu:hover {
   padding: 4%;
   border: solid 5px #72624B;
   background-color: rgba(232,232,232,0.5);
-  font-weight: bold;
+  font-weight: bolder;
   color: #B3A161;
 }
 a.menu:active {
