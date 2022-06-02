@@ -4,7 +4,7 @@
   --Header-color: #613EA0;
   --Header-background: rgba(200,187,222,0.7);
   --Nav-color: #3A2560;
-  --Nav-background: #FFFFFF;
+  --Nav-background: #F4F4F4;
   --Wrap-background: #FFFFFF;
   --Contents-color: #000000;
   --Contents-background: #F7F7FD;
@@ -91,6 +91,7 @@ a.menu {
   height: 100%;
   text-decoration: none;
   font-weight: 600;
+  color: var(--Header-color);
 }
 a.menu:hover {
   color: #3EA061;
@@ -144,6 +145,7 @@ div.Nav_home {
 }
 a.Nav_home {
   text-decoration: none;
+  color: var(--Nav-color);
 }
 a.Nav_home:hover {
   text-decoration: underline;
@@ -151,6 +153,16 @@ a.Nav_home:hover {
 ul.Nav_list {
   padding: 0;
   list-style: none;
+}
+li.Nav_list {
+  margin-top: 2%;
+}
+a.Nav_list {
+  text-decoration: none;
+  color: var(--Nav-color);
+}
+a.Nav_list:hover {
+  text-decoration: underline;
 }
 /* Contents 관련 스타일 적용 */
 .MainWrap {
