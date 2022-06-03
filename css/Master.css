@@ -25,8 +25,8 @@ html, body {
   top: 0;
   position: fixed;
   width: 100%;
-  height: 5%;
-  z-index: 9;
+  height: 70px;
+  z-index: 1;
   float: left;
   display: flex;
   align-items: center;
@@ -58,8 +58,8 @@ html, body {
   margin-left: 1%;
   overflow: hidden;
   float: left;
-  width: 3%;
-  height: 80%;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   text-align: center;
   align-items: center;
@@ -83,7 +83,7 @@ html, body {
   width: 40%;
 }
 div.menu {
-  width: 50%;
+  width: 500px;
 }
 a.menu {
   margin-left: 3%;
@@ -107,7 +107,7 @@ a.menu:active {
   position:fixed;
   width: 0;
   height: 100%;
-  z-index: 10;
+  z-index: 2;
   color: var(--Nav-color);
   background-color: var(--Nav-background);
   font-size: var(--default-font-size);
@@ -130,14 +130,14 @@ div.Nav_header {
   margin: 10% auto;
   margin-top: 20%;
   margin-bottom: 5%;
-  font-size: calc(var(--default-font-size) + 15%);
+  font-size: calc(var(--default-font-size) + 5%);
 }
 a.Nav_header {
   text-decoration: none;
   color: var(--Nav-color);
 }
 span.Nav_header_name {
-  font-size: calc(var(--default-font-size) - 80%);
+  font-size: calc(var(--default-font-size) - 85%);
 }
 div.Nav_home {
   margin: 10% auto;
@@ -167,19 +167,36 @@ a.Nav_list:hover {
 /* Contents 관련 스타일 적용 */
 .MainWrap {
   margin: 0;
-  padding-top: 0.1%;
   border-bottom: solid 0.5px #DADADA;
   background-color: var(--Wrap-background);
 }
 .Contents {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
   padding-top: 4%;
   position: relative;
-  width: 80%;
+  width: 1200px;
   height: auto;
   color: var(--Contents-color);
   background-color: var(--Contents-background);
+  font-size: var(--default-font-size);
+}
+a.Contents_title {
+  text-decoration: none;
+  text-align: center;
+  color: var(--Contents-color);
+}
+a.Contents_title:hover {
+  color: #5A5A5A;
+}
+h1.Contents_title {
+  margin-bottom: 0;
+}
+p.Contents_title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: calc(var(--default-font-size) - 50%);
 }
 /* Footer 관련 스타일 적용 */
 .Footer {

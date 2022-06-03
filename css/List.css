@@ -1,9 +1,41 @@
-h1 {
-  font-style: ;
+a.List {
+  text-decoration: none;
+  color: var(--Contents-color);
 }
-div nav.header {
-  margin: 10px;
-  border: solid black;
-  padding: 2px;
-  background-color: yellow;
+div.List {
+  margin: 20px;
+  border: solid 1px #CDCDCD;
+  width: 1100px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+}
+div.List:hover {
+  text-decoration: underline;
+}
+div.List_img {
+  width: 150px;
+  height: 170px;
+  float: left;
+}
+img.thumbnail {
+  width: 100%;
+  height: 100%;
+  transition: all var(--default-transduration);
+}
+img.thumbnail:hover {
+  filter: brightness(110%);
+}
+ul.List {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: calc(var(--default-font-size) + 0%);
+  font-weight: 600;
+}
+li.List {
+  margin: 0;
+}
+span.List_name {
+  margin-left: 20px;
 }

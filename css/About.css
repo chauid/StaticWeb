@@ -1,9 +1,3 @@
-h1 {
-  font-style: ;
-}
-div nav.header {
-  margin: 10px;
-  border: solid black;
-  padding: 2px;
-  background-color: yellow;
+div.Hello {
+  font-size: calc(var(--default-font-size) - 50%);
 }
