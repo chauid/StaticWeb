@@ -202,7 +202,7 @@ p.Contents_title {
 .Footer {
   margin: 0 auto;
   position: relative;
-  width: 1300px;
+  width: 1200px;
   height: 5%;
   color: var(--Footer-color);
   background-color: var(--Footer-background);
@@ -224,15 +224,4 @@ a.github:hover {
 div.designed {
   margin: 0;
   font-size: calc(var(--default-font-size) - 50%);
-}
-/* 기타 문단 스타일 활용 */
-div.block {
-  width: auto;
-  height: 30px;
-  font-size: calc(var(--default-font-size) -15%);
-}
-div.paragraph {
-  max-width: 100%;
-  padding: 2px 3px;
-  white-space: pre-wrap;
 }

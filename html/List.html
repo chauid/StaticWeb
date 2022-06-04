@@ -5,7 +5,6 @@
         <title>컴공학생A의 글 목록</title>
         <link rel="stylesheet" href="../css/Master.css">
         <link rel="stylesheet" href="../css/List.css">
-        <script src="../script/Master.js"></script>
     </head>
     <body>
         <div id="Header" class="Header">
@@ -27,17 +26,21 @@
             <div id="Nav_inner" class="Nav_inner">
                 <div class="Nav_header">
                     <a class="Nav_header" href="#"><strong>컴공학생A</strong></a>
-                    <span class="Nav_header_name">20190789장진욱</span>
+                    <span class="Nav_header_name">평범한 컴공생의 블로그</span>
                 </div>
                 <hr width="100%">
                 <div class="Nav_home">
                     <a class="Nav_home" href="./Home.html">Home</a>
                 </div>
                 <ul class="Nav_list">
-                    <li class="Nav_list"><a class="Nav_list" href="./Contents/C_list.html">C language<span>(1)</span></a></li>
-                    <li class="Nav_list"><a class="Nav_list" href="./Contents/Py_list.html">Python<span>(1)</span></a></li>
-                    <li class="Nav_list"><a class="Nav_list" href="./Contents/Bat_list.html">Windows Batch<span>(1)</span></a></li>
-                    <li class="Nav_list"><a class="Nav_list" href="./Contents/Sh_list.html">Linux Shell script<span>(1)</span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/C_list.html">C language<span class="C_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/Py_list.html">Python<span class="Py_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/Bat_list.html">Windows Batch<span class="Bat_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/Sh_list.html">Linux Shell script<span class="Sh_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/HTML_list.html">HTML<span class="HTML_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/CSS_list.html">CSS<span class="CSS_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/JS_list.html">JS<span class="JS_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="./Contents/PHP_list.html">PHP<span class="PHP_cnt"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -50,29 +53,76 @@
                 <h2>글 목록</h2>
                 <a class="List" href="./Contents/C_list.html">
                     <div class="List">
-                        <ul class="List">
-                            <li class="List">
-                                <div class="List_img"><img class="thumbnail" src="../img/C_logo.png" alt="C_logo"></div>
-                                <span class="List_name">C 언어</span>
-                            </li>
-                        </ul>
+                        <div class="List_img"><img class="thumbnail" src="../img/C_logo.png" alt="C_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">C language</span>
+                            <span class="C_cnt"></span>
+                        </div>
                     </div>
                 </a>
-                <div>
-                    <ul class="List">
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="List">
-                        <li>Windwos Batch</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul class="List">
-                        <li>Linux Shell script</li>
-                    </ul>
-                </div>
+                <a class="List" href="./Contents/Py_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/Py_logo.png" alt="Py_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">Python</span>
+                            <span class="Py_cnt"></span>
+                        </div>
+                    </div>
+                </a>
+                <a class="List" href="./Contents/Bat_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/Bat_logo.png" alt="Bat_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">Windows Batch</span>
+                            <span class="Bat_cnt"></span>
+                        </div>
+                    </div>
+                </a>
+                <a class="List" href="./Contents/Sh_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/Sh_logo.png" alt="Sh_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">Shell Script</span>
+                            <span class="Sh_cnt"></span>
+                        </div>
+                    </div>
+                </a>
+                <a class="List" href="./Contents/HTML_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/HTML_logo.png" alt="HTML_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">HTML</span>
+                            <span class="HTML_cnt"></span>
+                        </div>
+                    </div>
+                </a>
+                <a class="List" href="./Contents/CSS_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/CSS_logo.png" alt="CSS_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">CSS</span>
+                            <span class="CSS_cnt"></span>
+                        </div>
+                    </div>
+                </a>
+                <a class="List" href="./Contents/JS_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/JS_logo.png" alt="JS_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">Java Script</span>
+                            <span class="JS_cnt"></span>
+                        </div>
+                    </div>
+                </a>
+                <a class="List" href="./Contents/PHP_list.html">
+                    <div class="List">
+                        <div class="List_img"><img class="thumbnail" src="../img/PHP_logo.png" alt="PHP_logo"></div>
+                        <div class="List_name">
+                            <span class="List_name">PHP</span>
+                            <span class="PHP_cnt"></span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="Footer">
@@ -80,5 +130,5 @@
             <div class="designed"><span>Designed by 20190789장진욱</span></div>
         </div>
     </body>
-
+    <script src="../script/Master.js"></script>
 </html>

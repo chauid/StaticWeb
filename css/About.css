@@ -1,3 +1,7 @@
 div.Hello {
   font-size: calc(var(--default-font-size) - 50%);
 }
+div.AboutMe {
+  display: none;
+  transition: all calc(var(--default-transduration) - 0.5s);
+}

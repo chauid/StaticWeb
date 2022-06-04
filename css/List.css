@@ -3,20 +3,21 @@ a.List {
   color: var(--Contents-color);
 }
 div.List {
-  margin: 20px;
+  margin: 20px auto;
   border: solid 1px #CDCDCD;
   width: 1100px;
-  height: 170px;
-  display: flex;
-  align-items: center;
+  height: 120px;
+  font-size: calc(var(--default-font-size) + 0%);
+  font-weight: 600;
 }
 div.List:hover {
   text-decoration: underline;
 }
 div.List_img {
-  width: 150px;
-  height: 170px;
+  width: 120px;
+  height: 120px;
   float: left;
+  background-color: #FFFFFF;
 }
 img.thumbnail {
   width: 100%;
@@ -24,18 +25,13 @@ img.thumbnail {
   transition: all var(--default-transduration);
 }
 img.thumbnail:hover {
-  filter: brightness(110%);
+  filter: brightness(125%);
 }
-ul.List {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: calc(var(--default-font-size) + 0%);
-  font-weight: 600;
-}
-li.List {
-  margin: 0;
-}
-span.List_name {
-  margin-left: 20px;
+div.List_name {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9F9FD;
 }
