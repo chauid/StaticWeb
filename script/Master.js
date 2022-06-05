@@ -1,5 +1,5 @@
 // 목록별 게시글 개수
-const C_cnt = 1;
+const C_cnt = 2;
 const Py_cnt = 0;
 const Bat_cnt = 1;
 const Sh_cnt = 2;
