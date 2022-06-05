@@ -1,12 +1,13 @@
 // 목록별 게시글 개수
 const C_cnt = 1;
 const Py_cnt = 0;
-const Bat_cnt = 0;
-const Sh_cnt = 0;
+const Bat_cnt = 1;
+const Sh_cnt = 2;
 const HTML_cnt = 0;
 const CSS_cnt = 0;
 const JS_cnt = 0;
 const PHP_cnt = 0;
+var Total_cnt = C_cnt + Py_cnt + Bat_cnt + Sh_cnt + HTML_cnt + CSS_cnt + JS_cnt + PHP_cnt;
 // 사이드바 애니메이션
 function buttonclick() {
     var buttonbox = document.getElementById("Menu");
@@ -18,9 +19,9 @@ function buttonclick() {
     sideinner.classList.toggle('-active');
     header.classList.toggle('-active');
 }
-// 소개 내용 접기,펴기
-function toggleView() {
-    
+var Total_text = document.querySelectorAll(".Total_cnt");
+for (var i = Total_text.length; i--;) {
+    Total_text[i].innerHTML = "("+Total_cnt+")";
 }
 var C_text = document.querySelectorAll(".C_cnt");
 for (var i = C_text.length; i--;) {

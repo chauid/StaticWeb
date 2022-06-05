@@ -1,3 +1,6 @@
+h2.List_title {
+  margin: 40px;
+}
 a.List {
   text-decoration: none;
   color: var(--Contents-color);

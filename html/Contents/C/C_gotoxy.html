@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <title>[C언어] 좌표계-gotoxy()함수</title>
+        <link rel="stylesheet" href="../../../css/Master.css">
+    </head>
+    <body>
+        <div id="Header" class="Header">
+            <div class="Header_container">
+                <div id="Menu" class="menubutton" onclick="buttonclick()">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <div class="menu">
+                    <a href="../../Home.html" class="menu" title="홈페이지"><span>Home</span></a>
+                    <a href="../../List.html" class="menu" title="글 목록"><span>ContentsList</span></a>
+                    <a href="../../About.html" class="menu" title="저를 소개합니다."><span>About</span></a>
+                </div>
+            </div>
+            <span class="header_name">20190789 장진욱</span>
+        </div>
+        <div id="Nav" class="Nav">
+            <div id="Nav_inner" class="Nav_inner">
+                <div class="Nav_header">
+                    <a class="Nav_header" href="#"><strong>컴공학생A</strong></a>
+                    <span class="Nav_header_name">20190789장진욱</span>
+                </div>
+                <hr width="100%">
+                <div class="Nav_home">
+                    <a class="Nav_home" href="../../Home.html">Home</a>
+                </div>
+                <ul class="Nav_list">
+                    <li class="Nav_list"><a class="Nav_list" href="../C_list.html">C language<span class="C_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../Py_list.html">Python<span class="Py_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../Bat_list.html">Windows Batch<span class="Bat_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../Sh_list.html">Linux Shell script<span class="Sh_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../HTML_list.html">HTML<span class="HTML_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../CSS_list.html">CSS<span class="CSS_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../JS_list.html">JavaScript<span class="JS_cnt"></span></a></li>
+                    <li class="Nav_list"><a class="Nav_list" href="../PHP_list.html">PHP<span class="PHP_cnt"></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="MainWrap" style="height: auto !important;">
+            <div class="Contents">
+                <div><h2 class="Contents_title">[C언어] 좌표계-gotoxy()함수</h2></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="paragraph_subtitle">1. include windows.h</div>
+                <div class="paragraph">cmd 콘솔 환경에서 좌표를 찍기 위해서는 SetConsoleCursorPosition 함수와 COORD 구조체를 필요로 합니다.</div>
+                <div class="paragraph">따라서 기본적으로 Windows.h를 include 해줘야 합니다.</div>
+                <div class="paragraph"></div>
+                <div class="paragraph"></div>
+                <div class="paragraph"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="paragraph_subtitle">2. gotoxy() 함수 만들기</div>
+                <div class="codeblock">
+                    <ol>
+                        <li class="code">&lt;stdio.h&gt;</li>
+                        <li class="code">&lt;windows.h&gt;</li>
+                        <li class="code">void gotoxy(int x, int y)</li>
+                        <li class="code">{</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;COORD Cd;</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;Cd.X=x;</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;Cd.Y=y;</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Cd);</li>
+                        <li class="code">}</li>
+                        <li class="code">int main()</li>
+                        <li class="code">{</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;int x, y;</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;while(1)</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Input x,y : ");</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d,%d",&x, &y);</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system("cls");</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gotoxy(x, y);</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("■\n");</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system("pause");</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system("cls");</li>
+                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+                        <li class="code">}</li>
+                    </ol>
+                </div>
+                <div class="paragraph">저는 COORD 구조체를 구조체변수 Cd로 선언했습니다.</div>
+                <div class="paragraph">Cd.X와 Cd.Y의 X와 Y는 COORD의 멤버변수로 Short 자료형을 가지고 있습니다. SetConsoleCursorPosition 함수로 커서를 화면상의 입력한 좌표(x,y)로 이동하게 됩니다.</div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_1.png" alt="gotoxy_1.png"></div>
+                <div class="paragraph">위에 코드를 컴파일한 모습입니다. 저는 0,0 좌표를 입력해줬습니다.</div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_2.png" alt="gotoxy_2.png"></div>
+                <div class="paragraph">해당 좌표에 ■를 출력하게 설정했습니다. (0,0)좌표에 ■가 찍힌 것을 확인할 수 있습니다.</div>
+                <div class="block"></div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_3.png" alt="gotoxy_3.png"></div>
+                <div class="paragraph">이제 (10,10)좌표를 입력해 주었습니다. 그런데 x축과 y축의 거리가 같지 않습니다. 이러한 이유는 cmd의 알파벳 크기는 0.5이기 때문입니다.따라서 x축이 y축보다 1/2만큼 차이가 나게 됩니다.</div>
+                <div class="paragraph">x의 값에 *2를 추가로 작성해주면 됩니다.</div>
+                <div class="block"></div>
+                <div class="paragraph_subtitle">3. 화면 지우기 & 업데이트 하기</div>
+                <div class="paragraph">이제 그렸던 ■를 다시 지우는 방법에 대해 알아보겠습니다.</div>
+                <div class="paragraph">지우는 방법은 간단합니다. printf("■"); 부분을 printf(" "); 으로 바꿔주면 해당 좌표에 출력된 문자를 " "로 교체됩니다.</div>
+                <div class="paragraph">위에 방법은 해당 좌표의 값을 지우는 방법이지만 화면 전체를 초기화하여 업데이트해야 할 때가 있습니다.</div>
+                <div class="paragraph">위에 코드에서도 쓰였지만 system("cls");를 사용하면 화면 전체가 지워지게 됩니다. system()함수는 cmd에서 사용되는 명령어로 Windows Batch에서 더 다루도록 하겠습니다.</div>
+                <div class="block"></div>
+                <div class="paragraph">이렇게 하면 화면에 원하는 문자를 쓰고 지우는 것이 가능해졌습니다. 이제 간단한 게임을 만들 수 있는 조건 하나를 가지게 되었습니다.</div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="attach">
+                    <p class="attach">소스파일</p>
+                    <a class="attach" href="./C_gotoxy.cpp" download>gotoxy.cpp</a>
+                </div>
+                <div class="block"></div>
+                <div class="paragraph"><a class="paragraph_link" href="../C_list.html">목록으로 돌아가기</a></div>
+            </div>
+        </div>
+        <div class="Footer">
+            <div class="github"><a class="github" href="https://github.com/chauid/" target="_blank" title="새 탭에서 열기">GitHub</a></div>
+            <div class="designed"><span>Designed by 20190789장진욱</span></div>
+        </div>
+    </body>
+    <script src="../../../script/Master.js"></script>
+</html>

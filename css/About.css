@@ -1,7 +1,21 @@
-div.Hello {
-  font-size: calc(var(--default-font-size) - 50%);
+a.toggleview {
+  margin: auto 20px;
+  text-decoration: none;
+  transition: all var(--default-transduration);
 }
-div.AboutMe {
-  display: none;
-  transition: all calc(var(--default-transduration) - 0.5s);
+a.toggleview:hover {
+  color: #AB8F5E;
+}
+a.toggleview:active {
+  content: 'a';
+}
+.AboutMe {
+  height: 0;
+  overflow: hidden;
+  transition: all calc(var(--default-transduration) - 0s);
+}
+#AboutMe.-active {
+  margin-top: 50px;
+  width: 100%;
+  height: 850px;
 }
