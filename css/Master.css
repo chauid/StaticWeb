@@ -324,6 +324,7 @@ p.attach {
   padding: 0;
 }
 a.attach {
+  display: block;
   text-decoration: none;
   color: #000000;
 }
