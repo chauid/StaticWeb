@@ -1,5 +1,3 @@
-#include "main.h"
-
 char getkey_v1() //입력받을 때까지 대기 
 {
 	char first_key, second_key;

@@ -16,3 +16,4 @@ void GameTimer(int time); //타이머 출력(71,3)~(75,13)
 int GameWinner(int (*Omok_array)[19]); //게임 승리 조건 
 void Pause(bool *quit); //게임 일시정지 
 bool ReStart(int (*Omok_array)[19], bool win); //게임 재시작 
+#include "func.cpp"

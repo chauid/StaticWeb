@@ -307,7 +307,7 @@ div.codeblock {
   width: 90%;
   background-color: #0F3A58;
   color: #F2F2FF;
-  text-shadow: 0 0 5px #FFFB96;
+  text-shadow: 0 0 5px #c0bc46;
   font-size: calc(var(--default-font-size) - 35%);
 }
 li.code {
@@ -327,11 +327,14 @@ p.attach {
   padding: 0;
 }
 a.attach {
-  display: block;
   text-decoration: none;
-  color: #000000;
+  color: #6C5844;
+}
+a.attach::after {
+  content: ' ';
+  display: block;
 }
 a.attach:hover {
   text-decoration: underline;
-  color: #555555;
+  color: #B5ABA1;
 }
