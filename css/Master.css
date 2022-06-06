@@ -196,6 +196,7 @@ img.cwn_img {
 }
 div.Contents_img {
   margin: auto;
+  margin-top: 50px;
   width: 500px;
   height: auto;
 }
@@ -267,6 +268,7 @@ div.paragraph_title {
 }
 div.paragraph_subtitle {
   margin: 10px 20px;
+  margin-top: 60px;
   padding: 10px 20px;
   max-width: 100%;
   border-left: solid 3px #E5E5E5;
@@ -316,6 +318,7 @@ li.code::marker {
   color: #A3A3FF;
 }
 div.attach {
+  margin-top: 30px;
   padding: 5px;
   border: solid 1px #838383;
 }

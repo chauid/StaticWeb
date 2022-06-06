@@ -1,24 +1,32 @@
 #include <stdio.h>
 #include <conio.h>
-char getkey()
+char getkey() //left 75, right 77, up 72, down 80
 {
 	if(kbhit()==1) return getch();
 	else return '\0';
 }
 int main()
 {
-	int i, j, f=1;
-	char key, key1, key2;
+	char key;
 	while(1)
 	{
-
 		key=kbhit();
 		while(key==1)
 		{
-			key1=getkey();
-			printf("입력한 문자1 : %c, 값 : %d buffer : %d\n", key1, key1, kbhit());
-			key=kbhit();
-			printf("buffer2: %d\n", key);
+			key=getkey();
+			if(key == -32)
+			{
+				key=getkey();
+				switch(key)
+				{
+					case 75: printf("입력한 문자 : ←\n"); break;
+					case 77: printf("입력한 문자 : →\n"); break;
+					case 72: printf("입력한 문자 : ↑\n"); break;
+					case 80: printf("입력한 문자 : ↓\n"); break;
+					default: break;
+				}
+			}
+			else printf("입력한 문자 : %c, 값 : %d buffer : %d\n", key, key, kbhit());
 		}
 	}
 }

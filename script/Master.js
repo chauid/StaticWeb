@@ -55,3 +55,28 @@ var PHP_text = document.querySelectorAll(".PHP_cnt");
 for (var i = PHP_text.length; i--;) {
     PHP_text[i].innerHTML = "("+PHP_cnt+")";
 }
+// 탭 문자 넣기
+var codetab1 = document.querySelectorAll(".tab1");
+for (var i = codetab1.length; i--;) {
+    codetab1[i].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+var codetab2 = document.querySelectorAll(".tab2");
+for (var i = codetab2.length; i--;) {
+    codetab2[i].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+var codetab3 = document.querySelectorAll(".tab3");
+for (var i = codetab3.length; i--;) {
+    codetab3[i].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+var codetab4 = document.querySelectorAll(".tab4");
+for (var i = codetab4.length; i--;) {
+    codetab4[i].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+var codetab5 = document.querySelectorAll(".tab5");
+for (var i = codetab5.length; i--;) {
+    codetab5[i].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+}
+var codetab6 = document.querySelectorAll(".tab6");
+for (var i = codetab6.length; i--;) {
+    codetab6[i].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+}

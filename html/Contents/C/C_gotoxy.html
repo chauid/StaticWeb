@@ -46,58 +46,50 @@
         <div class="MainWrap" style="height: auto !important;">
             <div class="Contents">
                 <div><h2 class="Contents_title">[C언어] 좌표계-gotoxy()함수</h2></div>
-                <div class="block"></div>
-                <div class="block"></div>
                 <div class="paragraph_subtitle">1. include windows.h</div>
                 <div class="paragraph">cmd 콘솔 환경에서 좌표를 찍기 위해서는 SetConsoleCursorPosition 함수와 COORD 구조체를 필요로 합니다.</div>
                 <div class="paragraph">따라서 기본적으로 Windows.h를 include 해줘야 합니다.</div>
-                <div class="paragraph"></div>
-                <div class="paragraph"></div>
-                <div class="paragraph"></div>
-                <div class="block"></div>
-                <div class="block"></div>
+                <div class="paragraph">COORD의 구조체 멤버 X, Y는 cmd 화면 상의 좌표를 의미합니다.</div>
+                <div class="paragraph">while문을 사용해 (x,y) 한 쌍의 좌표값을 입력하면 그 위치에 ■를 출력하는 코드를 만들어 보도록 하겠습니다.</div>
                 <div class="paragraph_subtitle">2. gotoxy() 함수 만들기</div>
                 <div class="codeblock">
                     <ol>
-                        <li class="code">&lt;stdio.h&gt;</li>
-                        <li class="code">&lt;windows.h&gt;</li>
+                        <li class="code">#include &lt;stdio.h&gt;</li>
+                        <li class="code">#include &lt;windows.h&gt;</li>
                         <li class="code">void gotoxy(int x, int y)</li>
                         <li class="code">{</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;COORD Cd;</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;Cd.X=x;</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;Cd.Y=y;</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Cd);</li>
+                        <li class="code"><span class="tab1"></span>COORD Cd;</li>
+                        <li class="code"><span class="tab1"></span>Cd.X=x;</li>
+                        <li class="code"><span class="tab1"></span>Cd.Y=y;</li>
+                        <li class="code"><span class="tab1"></span>SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Cd);</li>
                         <li class="code">}</li>
                         <li class="code">int main()</li>
                         <li class="code">{</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;int x, y;</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;while(1)</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Input x,y : ");</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d,%d",&x, &y);</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system("cls");</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gotoxy(x, y);</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("■\n");</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system("pause");</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system("cls");</li>
-                        <li class="code">&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+                        <li class="code"><span class="tab1"></span>int x, y;</li>
+                        <li class="code"><span class="tab1"></span>while(1)</li>
+                        <li class="code"><span class="tab1"></span>{</li>
+                        <li class="code"><span class="tab2"></span>printf("Input x,y : ");</li>
+                        <li class="code"><span class="tab2"></span>scanf("%d,%d",&x, &y);</li>
+                        <li class="code"><span class="tab2"></span>system("cls");</li>
+                        <li class="code"><span class="tab2"></span>gotoxy(x, y);</li>
+                        <li class="code"><span class="tab2"></span>printf("■\n");</li>
+                        <li class="code"><span class="tab2"></span>system("pause");</li>
+                        <li class="code"><span class="tab2"></span>system("cls");</li>
+                        <li class="code"><span class="tab1"></span>}</li>
                         <li class="code">}</li>
                     </ol>
                 </div>
                 <div class="paragraph">저는 COORD 구조체를 구조체변수 Cd로 선언했습니다.</div>
-                <div class="paragraph">Cd.X와 Cd.Y의 X와 Y는 COORD의 멤버변수로 Short 자료형을 가지고 있습니다. SetConsoleCursorPosition 함수로 커서를 화면상의 입력한 좌표(x,y)로 이동하게 됩니다.</div>
-                <div class="block"></div>
-                <div class="block"></div>
+                <div class="paragraph">Cd.X와 Cd.Y의 X와 Y는 COORD의 멤버변수로 Short 자료형을 가지고 있습니다. SetConsoleCursorPosition 함수를 사용하면 커서가 화면상의 입력한 좌표(x,y)로 이동하게 됩니다.</div>
                 <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_1.png" alt="gotoxy_1.png"></div>
                 <div class="paragraph">위에 코드를 컴파일한 모습입니다. 저는 0,0 좌표를 입력해줬습니다.</div>
-                <div class="block"></div>
-                <div class="block"></div>
                 <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_2.png" alt="gotoxy_2.png"></div>
                 <div class="paragraph">해당 좌표에 ■를 출력하게 설정했습니다. (0,0)좌표에 ■가 찍힌 것을 확인할 수 있습니다.</div>
-                <div class="block"></div>
                 <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_3.png" alt="gotoxy_3.png"></div>
                 <div class="paragraph">이제 (10,10)좌표를 입력해 주었습니다. 그런데 x축과 y축의 거리가 같지 않습니다. 이러한 이유는 cmd의 알파벳 크기는 0.5이기 때문입니다.따라서 x축이 y축보다 1/2만큼 차이가 나게 됩니다.</div>
-                <div class="paragraph">x의 값에 *2를 추가로 작성해주면 됩니다.</div>
-                <div class="block"></div>
+                <div class="paragraph">x의 값에 *2를 추가로 작성해주면 거리가 같아질 것입니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/C/C_gotoxy/gotoxy_4.png" alt="gotoxy_4.png"></div>
+                <div class="paragraph">보이는 것과 같이 (x*2,y)을 입력한 결과, x축과 y축 모두 같은 거리만큼 떨어져 있게 됐습니다.</div>
                 <div class="paragraph_subtitle">3. 화면 지우기 & 업데이트 하기</div>
                 <div class="paragraph">이제 그렸던 ■를 다시 지우는 방법에 대해 알아보겠습니다.</div>
                 <div class="paragraph">지우는 방법은 간단합니다. printf("■"); 부분을 printf(" "); 으로 바꿔주면 해당 좌표에 출력된 문자를 " "로 교체됩니다.</div>
@@ -105,8 +97,6 @@
                 <div class="paragraph">위에 코드에서도 쓰였지만 system("cls");를 사용하면 화면 전체가 지워지게 됩니다. system()함수는 cmd에서 사용되는 명령어로 Windows Batch에서 더 다루도록 하겠습니다.</div>
                 <div class="block"></div>
                 <div class="paragraph">이렇게 하면 화면에 원하는 문자를 쓰고 지우는 것이 가능해졌습니다. 이제 간단한 게임을 만들 수 있는 조건 하나를 가지게 되었습니다.</div>
-                <div class="block"></div>
-                <div class="block"></div>
                 <div class="attach">
                     <p class="attach">소스파일</p>
                     <a class="attach" href="./C_gotoxy.cpp" download>gotoxy.cpp</a>

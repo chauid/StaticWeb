@@ -6,6 +6,8 @@
   --Nav-color: #3A2560;
   --Nav-background: #F4F4F4;
   --Wrap-background: #FFFFFF;
+  --Contents-width-desktop: 1200px;
+  --Contents-width-mobile: 600px;
   --Contents-color: #000000;
   --Contents-background: #F7F7FD;
   --Footer-color: #636363;
@@ -26,7 +28,7 @@ html, body {
   position: fixed;
   width: 100%;
   height: 70px;
-  z-index: 1;
+  z-index: 2;
   float: left;
   display: flex;
   align-items: center;
@@ -107,7 +109,7 @@ a.menu:active {
   position:fixed;
   width: 0;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   color: var(--Nav-color);
   background-color: var(--Nav-background);
   font-size: var(--default-font-size);
@@ -181,6 +183,25 @@ a.Nav_list:hover {
   color: var(--Contents-color);
   background-color: var(--Contents-background);
   font-size: var(--default-font-size);
+  z-index: 0;
+}
+div.cwn_img {
+  width: 1200px;
+  opacity: 0.8;
+  z-index: 1;
+}
+img.cwn_img {
+  width: 100%;
+  height: 100%;
+}
+div.Contents_img {
+  margin: auto;
+  width: 500px;
+  height: auto;
+}
+img.Contents_img {
+  width: 100%;
+  height: 100%;
 }
 a.Contents_title {
   text-decoration: none;
@@ -192,6 +213,12 @@ a.Contents_title:hover {
 }
 h1.Contents_title {
   margin-bottom: 0;
+  font-size: calc(var(--default-font-size) + 50%);
+}
+h2.Contents_title {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #323232;
+  font-size: calc(var(--default-font-size) + 15%);
 }
 p.Contents_title {
   margin-top: 0;
@@ -202,7 +229,7 @@ p.Contents_title {
 .Footer {
   margin: 0 auto;
   position: relative;
-  width: 1200px;
+  width: 1300px;
   height: 5%;
   color: var(--Footer-color);
   background-color: var(--Footer-background);
@@ -224,4 +251,84 @@ a.github:hover {
 div.designed {
   margin: 0;
   font-size: calc(var(--default-font-size) - 50%);
+}
+/* 기타 문단 스타일 활용 */
+div.block {
+  width: auto;
+  height: 30px;
+}
+div.paragraph_title {
+  margin: auto 20px;
+  padding: 10px 3px;
+  border-bottom: solid 1px #737373;
+  max-width: 100%;
+  font-size: calc(var(--default-font-size) + 5%);
+  font-weight: 600;
+}
+div.paragraph_subtitle {
+  margin: 10px 20px;
+  padding: 10px 20px;
+  max-width: 100%;
+  border-left: solid 3px #E5E5E5;
+  font-size: var(--default-font-size);
+}
+div.paragraph {
+  margin: auto 20px;
+  padding: 2px 3px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  font-size: calc(var(--default-font-size) - 30%);
+}
+span.paragraph_date {
+  margin: auto 10px;
+  color: #AA8C74;
+}
+span.paragraph_link {
+  border-left: solid 4px #323232;
+  padding-left: 10px;
+}
+a.paragraph_link {
+  text-decoration: underline;
+  text-decoration-color: #B9B9B9;
+  color: #67A9EB;
+}
+div.thumbnail {
+  margin: 50px auto;
+  width: 800px;
+}
+img.thumbnail {
+  width: 100%;
+  height: 100%;
+}
+div.codeblock {
+  margin: auto;
+  width: 90%;
+  background-color: #0F3A58;
+  color: #F2F2FF;
+  text-shadow: 0 0 5px #FFFB96;
+  font-size: calc(var(--default-font-size) - 35%);
+}
+li.code {
+  margin-left: 10px;
+}
+li.code::marker {
+  content: counter(list-item) " |  ";
+  color: #A3A3FF;
+}
+div.attach {
+  padding: 5px;
+  border: solid 1px #838383;
+}
+p.attach {
+  margin: 0;
+  padding: 0;
+}
+a.attach {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+}
+a.attach:hover {
+  text-decoration: underline;
+  color: #555555;
 }

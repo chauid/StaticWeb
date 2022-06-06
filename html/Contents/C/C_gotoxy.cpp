@@ -15,7 +15,7 @@ int main()
 		printf("Input x,y : ");
 		scanf("%d,%d",&x, &y);
 		system("cls");
-		gotoxy(x, y);
+		gotoxy(x*2, y);
 		printf("бс\n");
 		system("pause");
 		system("cls");

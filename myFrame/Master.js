@@ -1,8 +1,8 @@
 // 목록별 게시글 개수
-const C_cnt = 1;
-const Py_cnt = 0;
-const Bat_cnt = 0;
-const Sh_cnt = 0;
+const list1_cnt = 4;
+const list2_cnt = 3;
+const list3_cnt = 2;
+const list4_cnt = 1;
 // 사이드바 애니메이션
 function buttonclick() {
     var buttonbox = document.getElementById("Menu");
@@ -14,19 +14,19 @@ function buttonclick() {
     sideinner.classList.toggle('-active');
     header.classList.toggle('-active');
 }
-var C_text = document.querySelectorAll(".C_cnt");
-for (var i = C_text.length; i--;) {
-    C_text[i].innerHTML = "("+C_cnt+")";
+var list1_text = document.querySelectorAll(".list1_cnt");
+for (var i = list1_text.length; i--;) {
+    list1_text[i].innerHTML = "("+list1_cnt+")";
 }
-var Py_text = document.querySelectorAll(".Py_cnt");
-for (var i = Py_text.length; i--;) {
-    Py_text[i].innerHTML = "("+Py_cnt+")";
+var list2_text = document.querySelectorAll(".list2_cnt");
+for (var i = list2_text.length; i--;) {
+    list2_text[i].innerHTML = "("+list2_cnt+")";
 }
-var Bat_text = document.querySelectorAll(".Bat_cnt");
-for (var i = Bat_text.length; i--;) {
-    Bat_text[i].innerHTML = "("+Bat_cnt+")";
+var list3_text = document.querySelectorAll(".list3_cnt");
+for (var i = list3_text.length; i--;) {
+    list3_text[i].innerHTML = "("+list3_cnt+")";
 }
-var Sh_text = document.querySelectorAll(".Sh_cnt");
-for (var i = Sh_text.length; i--;) {
-    Sh_text[i].innerHTML = "("+Sh_cnt+")";
+var list4_text = document.querySelectorAll(".list4_cnt");
+for (var i = list4_text.length; i--;) {
+    list4_text[i].innerHTML = "("+list4_cnt+")";
 }
