@@ -1,3 +1,6 @@
-div.Contents_List {
+h2.Home_title {
+    margin: 40px;
+  }
+div.Contents_grid {
     display: grid;
 }
