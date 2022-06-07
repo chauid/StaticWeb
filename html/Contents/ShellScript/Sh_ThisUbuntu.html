@@ -2,7 +2,7 @@
 <html lang="ko-KR">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-        <title>[Shell Script] 이것이 우분투 리눅스다. 자동설치 bash 파일 만들기</title>
+        <title>[Shell Script] 이것이 우분투 리눅스다. 자동설치하기</title>
         <link rel="stylesheet" href="../../../css/Master.css">
     </head>
     <body>
@@ -45,7 +45,7 @@
         </div>
         <div class="MainWrap" style="height: auto !important;">
             <div class="Contents">
-                <div><h2 class="Contents_title">[Shell Script] 이것이 우분투 리눅스다. 9장 자동설치 bash 파일 만들기</h2></div>
+                <div><h2 class="Contents_title">[Shell Script] 이것이 우분투 리눅스다. 9장 자동설치하기</h2></div>
                 <div class="paragraph_subtitle">1. "이것이 우분투 리눅스다" 책소개</div>
                 <div class="paragraph">안녕하세요. 이번 글에서는 우재남 저자께서 지으신 "이것이 우분투 리눅다"라는 책의 내용에 관하여 작성하였습니다.</div>
                 <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_1.jpg" alt="ThisisUbuntu_1.jpg"></div>
@@ -54,24 +54,53 @@
                 <div class="paragraph">자세한 내용은 "이것이 우분투 리눅스다" 책의 9장을 참고하시기 바랍니다.</div>
                 <div class="paragraph">이 코드를 만들게 된 이유는 제가 실습 과정 중 오타가 발생하여 마지막 결과에 작동하지 않는 문제가 발생했었습니다.</div>
                 <div class="paragraph">과정을 이해하고 따라하다가도 결과는 작동하지 않는 경우도 많이 목격하였습니다. 그래서 bash 파일로 간단한 제어문과 명령어로 결과를 빠르게 도출할 수 있는 코드를 만들었습니다.</div>
-                <div class="paragraph">저는 리눅스를 따로 컴퓨터에 설치하고 있지 않아서 VMWare를 이용하였습니다.</div>
+                <div class="paragraph_subtitle">2. 네임서버 & ftp 서버 설치하기</div>
+                <div class="paragraph">저는 리눅스를 따로 컴퓨터에 설치하고 있지 않아서 VMWare를 이용하였습니다. 네임서버를 구축하고 실습하기 위해 컴퓨터가 최소 3대가 필요합니다.</div>
                 <div class="codeblock">
                     <ol>
-                        <li class="code">#!/bin/bash</li>
-                        <li class="code"></li>
-                        <li class="code"></li>
+                        <li class="code">wget https://chauid.github.io/Linux/09/server.sh</li>
                    </ol>
                 </div>
-                <div class="paragraph"></div>
-                <div class="paragraph"></div>
-                <div class="paragraph"></div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_2.png" alt="ThisisUbuntu_2.png"></div>
+                <div class="paragraph">Server 컴퓨터에서 wget 명령어를 사용하여 깃허브에 원격 저장소에서 server.sh를 다운받습니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_3.png" alt="ThisisUbuntu_3.png"></div>
+                <div class="paragraph">Server(B) 컴퓨터에서도 ServerB.sh 파일을 다운받아 줍니다.</div>
+                <div class="paragraph">이제 bash 명령어로 실행시켜 줍시다. dash나 sh 명령어를 사용해도 됩니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_4.png" alt="ThisisUbuntu_4.png"></div>
+                <div class="paragraph">스크립트 파일이 알아서 잘 설치해주는 것을 볼 수 있습니다. server(B) 컴퓨터는 한글 설치를 하지 않는다고 가정하여 파일의 출력을 모두 영어로 했습니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_5.png" alt="ThisisUbuntu_5.png"></div>
+                <div class="paragraph">Server 컴퓨터에서도 bash 명령어로 실행해 줍니다. 패키지 파일을 먼저 체크하고 없으면 설치하도록 코딩하였습니다.</div>
+                <div class="paragraph">프로그램 설명이 궁금하시다면 wget https://chauid.github.io/09/Chapter09-todolist.txt 으로 다운받아서 참고하세요.</div>
+                <div class="paragraph">프로그램의 순서는 책을 참고하세요.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_6.png" alt="ThisisUbuntu_6.png"></div>
+                <div class="paragraph">ftp서버를 구축할 Server(B) 컴퓨터의 IP를 확인해 줍시다. Server 컴퓨터가 네임서버가 되어서 ftp서버로 연결해줄 겁니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_7.png" alt="ThisisUbuntu_7.png"></div>
+                <div class="paragraph">웹페이지의 제목은 Hello_Server로 설정해줬습니다. 도메인은 hellohello로 설정해 줬습니다. 이제 Server 컴퓨터의 IP를 네임서버로 사용하는 모든 컴퓨터에서 hellohello.com 웹페이지에 접속할 수 있습니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_8.png" alt="ThisisUbuntu_8.png"></div>
+                <div class="paragraph">설치가 완료된 모습입니다. 이제 Client 컴퓨터와 Windows 컴퓨터로 DNS서버를 Server의 IP로 지정하여 네임서버의 작동을 확인해보겠습니다.</div>
+                <div class="paragraph_subtitle">3. 클라이언트로 네임서버 작동 확인하기</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_9.png" alt="ThisisUbuntu_9.png"></div>
+                <div class="paragraph">Clinet 컴퓨터의 DNS서버 주소를 Server 컴퓨터의 IP주소로 설정해 줍니다.</div>
+                <div class="paragraph">이제 주소창에 hellohello.com 입력하여 접속해 봅시다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_10.png" alt="ThisisUbuntu_10.png"></div>
+                <div class="paragraph">hellohello.com으로 잘 접속하는 것을 확인할 수 있습니다.</div>
+                <div class="paragraph">이제 Windows 환경에서도 적용해 보겠습니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_11.png" alt="ThisisUbuntu_11.png"></div>
+                <div class="paragraph">Windows 컴퓨터에서도 DNS서버의 주소를 Server 컴퓨터의 IP로 설정해줍니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_12.png" alt="ThisisUbuntu_12.png"></div>
+                <div class="paragraph">Windows 컴퓨터에서도 hellohello.com에 잘 접속되는 것을 확인할 수 있습니다.</div>
+                <div class="Contents_img"><img class="Contents_img" src="../../../img/Sh/Sh_ThisisUbuntu/ThisisUbuntu_13.png" alt="ThisisUbuntu_13.png"></div>
+                <div class="paragraph">ftp서버도 잘 작동하는 것을 확인할 수 있습니다. 환영메세지는 ServerB.sh의 파일을 수정하거나 /srv/ftp/welcome.msg를 수정하면 바꿀 수 있습니다.</div>
+                <div class="paragraph">해당 파일은 제 Github 레포지토리에서 확인할 수 있습니다. Github 주소 : <a class="paragraph_link" href="https://github.com/chauid/Linux/tree/master/09" target="_blank">https://github.com/chauid/Linux/09/</a></div>
+                <div class="block"></div>
+                <div class="paragraph">네임서버의 설치 및 운영에 대해서 알아보았습니다. 다음 글에서는 10장 [메일 서버 설치와 운영]에 대해서 알아보겠습니다.</div>
                 <div class="attach">
                     <p class="attach">소스파일</p>
                     <a class="attach" href="./server.sh" download>server.sh</a>
                     <a class="attach" href="./serverB.sh" download>serverB.sh</a>
                 </div>
                 <div class="block"></div>
-                <div class="paragraph"><a class="paragraph_link" href="../Bat_list.html">목록으로 돌아가기</a></div>
+                <div class="paragraph"><a class="paragraph_link" href="../Sh_list.html">목록으로 돌아가기</a></div>
             </div>
         </div>
         <div class="Footer">
