@@ -60,7 +60,7 @@ strong.grid_post_title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: calc(var(--default-font-size) - 5%);
+  font-size: calc(var(--default-font-size) - 25%);
 }
 p.grid_post_text {
   margin: 20px auto;
@@ -69,5 +69,5 @@ p.grid_post_text {
   overflow: hidden;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  font-size: calc(var(--default-font-size) - 30%);
+  font-size: calc(var(--default-font-size) - 40%);
 }
