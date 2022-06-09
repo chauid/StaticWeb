@@ -1,13 +1,10 @@
-a.toggleview {
+a.toggleview:link, a.toggleview:visited {
   margin: auto 20px;
   text-decoration: none;
   transition: all var(--default-transduration);
 }
 a.toggleview:hover {
   color: #AB8F5E;
-}
-a.toggleview:active {
-  content: 'a';
 }
 .AboutMe {
   height: 0;
